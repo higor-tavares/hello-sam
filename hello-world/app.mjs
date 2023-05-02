@@ -11,12 +11,14 @@
  * 
  */
 
+const users = [{"name": "Higor", "age": 27}, {"name":"Marcos", "age": 34}];
+
 export const lambdaHandler = async (event, context) => {
     try {
         return {
             'statusCode': 200,
             'body': JSON.stringify({
-                message: 'hello world',
+                message: JSON.stringify(users),
             })
         }
     } catch (err) {
